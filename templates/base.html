@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}BihariBlogger{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}{% endblock %}</h1>
+        <nav>
+             <ul class="nav-right">
+                <li><a href='\home'>Home</a></li>
+                <li><a href='\about'>About Us</a></li>
+                <li><a href='\contact'>Contact</a></li>
+            </ul>
+            <ul class="nav-left">
+                <li><a href="\login">Login</a></li>
+                <li><a href='\register'>Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category,message in messages %}
+                <div class="alert alert-{{category}}">
+                    {{message}}
+                </div>
+               {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BihariBlogger. All rights reserved.<br>
+        Created by <strong>Mithilesh Narayan Chaurasiya</strong></p>
+    </footer>
+</body>
+</html>

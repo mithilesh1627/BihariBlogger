@@ -1,0 +1,317 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 5px 2px;  /* Reduce padding to decrease height */
+    text-align: center;
+    font-size: 1.0rem; /* Adjust font size if needed */
+}
+.alert {
+    padding: 15px;
+    margin: 10px auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+}
+.alert-success {
+    background-color: #71da71; /* Bootstrap Green */
+}
+/* Optional: Reduce h1 size inside header */
+header h1 {
+    font-size: 1.8rem; /* Adjust as needed */
+    margin: 0px 0;  /* Reduce extra spacing */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Split items */
+    padding: 5px 20px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex:1;
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Article */
+.blog-article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+/* Style for post author */
+.post-author {
+    color: #0073e6;  /* Blue color */
+    font-weight: bold;
+}
+
+/* Style for post date */
+.post-date {
+    color: black;  /* Black color */
+}
+
+.post-divider {
+    border: none;
+    height: 1px;
+    background: #ccc;  /* Light gray line */
+    margin: 10px 0;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Comments Section */
+.comments-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comments-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.comment-form button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comment-form button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Thank You Message */
+.thank-you-message {
+    display: none;
+    background-color: #e7f9e7;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Registration Form Styles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.text-danger {
+    font-size: 0.875em;
+    color: #dc3545;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.text-muted {
+    font-size: 0.875em;
+}
+
+.text-info {
+    color: #17a2b8;
+}
+
+.text-info:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-control {
+        font-size: 1em;
+    }
+
+    .btn-primary {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}

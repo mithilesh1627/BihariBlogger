@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - BihariBlogger{% endblock %}
+
+{% block header %}{{ post.title }}{% endblock %}
+
+{% block body %}
+    <article class="blog-article">
+        <h2>{{ post.title }}</h2>
+        <p class="article-meta">By <strong>{{ post.author }}</strong> | {{ post.date_posted }}</p>
+        <div class="article-content">
+            {{ post.content | safe }}
+        </div>
+    </article>
+
+    <section class="comments-section">
+        <h3>Comments</h3>
+        {% if comments %}
+            <ul class="comments-list">
+                {% for comment in comments %}
+                    <li>
+                        <p><strong>{{ comment.author }}</strong> says:</p>
+                        <p>{{ comment.content }}</p>
+                        <span class="comment-date">{{ comment.date_posted }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No comments yet. Be the first to comment!</p>
+        {% endif %}
+        
+        <!-- Comment Form -->
+        <form action="{{ url_for('add_comment', post_id=post.id) }}" method="POST" class="comment-form">
+            <textarea name="comment" placeholder="Write a comment..." required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
+{% endblock %}
